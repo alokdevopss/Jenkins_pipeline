@@ -3,7 +3,7 @@ FROM openjdk:11
 
 # define spark and hadoop versions
 ENV SPARK_VERSION=2.4.7
-ENV HADOOP_VERSION=3.3.1
+# ENV HADOOP_VERSION=3.3.1
 
 # download and install hadoop
 # RUN mkdir -p /opt && \
