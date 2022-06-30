@@ -4,6 +4,7 @@ FROM openjdk:11
 # define spark and hadoop versions
 # ENV SPARK_VERSION=3.2.0
 # ENV HADOOP_VERSION=3.3.1
+RUN mkdir target
 COPY /target/spark-3.2.1-bin-hadoop3.2.tgz  /home/alok/spark-3.2.1-bin-hadoop3.2.tgz 
 CMD ["java","-jar","/home/alok/spark-3.2.1-bin-hadoop3.2.tgz"]
 # download and install spark
