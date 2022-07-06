@@ -37,9 +37,9 @@
 FROM python:3.9-alpine3.15
 LABEL maintainer="Noor Ibrahim"
 ENV PYTHONUNBUFFERED 1
-COPY ./message /message
-COPY ./requirements.txt /requirements.txt
-WORKDIR /message
+# COPY ./message /message
+# COPY ./requirements.txt /requirements.txt
+# WORKDIR /message
 EXPOSE 8000
 RUN
 RUN python -m venv /py && \
