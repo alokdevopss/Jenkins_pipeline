@@ -35,18 +35,10 @@
 
 
 FROM python:3.9-alpine3.15
-LABEL maintainer="Noor Ibrahim"
-ENV PYTHONUNBUFFERED 1
-# COPY ./message /message
-# COPY ./requirements.txt /requirements.txt
-# WORKDIR /message
-EXPOSE 8000
-# RUN
-RUN python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /requirements.txt && \
-    adduser --disabled-password --no-create-home user
 
-ENV PATH="/py/bin:$PATH"
-USER user
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
+
 
