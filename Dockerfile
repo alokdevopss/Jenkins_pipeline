@@ -41,7 +41,7 @@ ENV PYTHONUNBUFFERED 1
 # COPY ./requirements.txt /requirements.txt
 # WORKDIR /message
 EXPOSE 8000
-RUN
+# RUN
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /requirements.txt && \
