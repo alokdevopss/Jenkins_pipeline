@@ -43,7 +43,7 @@ FROM python:3.6.8-alpine3.9
 WORKDIR /var/www/
 
 ADD . /var/www/
-RUN pip install -r requirements.txt
+RUN pip install 
 RUN pip install gunicorn
 
 RUN addgroup -g $GROUP_ID www
